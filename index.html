@@ -3,59 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
-    <p>Signup</p>
-    <h1>Filter ui cards via tdeir profession.</h1>
-    <h2>Profession</h2>
-    <table class="separate">
-        <tr class="first">
-            <td>1.</td>
-            <td>Name : Jhon</td>
-            <td>Profession: Developer </td>
-            <td>Age:18</td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>Name : Jack  </td>
-            <td>Profession: Developer </td>
-            <td>Age:20</td>
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td>Name : Karen  </td>
-            <td>Profession: Admin  </td>
-            <td>Age:19</td>
-        </tr>
-    </table>
-    <button class="bstyle">Filter</button>
 
-    <h1>Add a new user</h1>
-    <footer class="add-to-card">
-        <div class="name">
-            <label >Enter Name</label>
-            <input type="text">
-
-        </div>
-        <div class="name">
-            <label >Enter profession</label>
-            <input type="text">
-
-        </div>
-        <div class="name">
-            <label >Enter Age</label>
-            <input type="text">
-
-        </div>
-    </footer>
-    <button class="bstyle">Add User</button>
+    <h3 style="color:white;">Filter ui cards via their profession.</h3>
     
+    <div id="filterSection">
+        <label for="profession"></label>
+        <select id="profession">
+            <option value="">Profession</option>
+            <option value="developer">Developer</option>
+            <option value="admin">Admin</option>
+        </select>  
+    </div>
+    
+      
+    
+    <div id="usersSection">
+        <div id="userList"></div>
+        <button id="filterBtn">Filter</button>
+    </div>
+
+      
+
+    <div id="addUserSection">
+        <h3>Add a New User</h3>
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" class="addUser">
+
+        <label for="profession">Enter Profession</label>
+        <select id="addProfession" class="addUser">
+            <option value=""></option>
+            <option value="developer">Developer</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <label for="age">Enter Age</label>
+        <input type="number" id="age" class="addUser">
+        <br>
+        <button id="addUserBtn">Add User</button>
+    </div>
+    
+    <script src="script.js"></script>
+
 </body>
-<script src="script.js"></script>
 </html>
